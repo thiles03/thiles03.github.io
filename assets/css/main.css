@@ -1343,7 +1343,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			body, input, textarea, select {
-				font-size: 14pt;
+				font-size: 13pt;
 			}
 
 		}
@@ -1392,7 +1392,7 @@ input, select, textarea {
 		line-height: 1.75em;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 980px) {
 
 		h1 {
 			font-size: 1.75em;
@@ -1411,6 +1411,30 @@ input, select, textarea {
 			font-weight: 300;
 			color: #777777;
 			font-size: 12pt;
+			line-height: 1.75em;
+		}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		h1 {
+			font-size: 1.75em;
+		}
+
+		h2 {
+			font-size: 1.375em;
+		}
+
+		h3, h4, h5 {
+			font-size: 1em;
+		}
+
+		h6 {
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 300;
+			color: #777777;
+			font-size: 11pt;
 			line-height: 1.75em;
 		}
 
@@ -1697,7 +1721,7 @@ input, select, textarea {
 			input[type="reset"],
 			button,
 			.button {
-				width: 100%;
+				width: 50%;
 			}
 
 		}
