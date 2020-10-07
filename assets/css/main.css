@@ -143,6 +143,7 @@ input, select, textarea {
 
 		.row > .col-4 {
 			width: 50%;
+			position: relative;
 		}
 
 		.row > .off-4 {
@@ -892,6 +893,7 @@ input, select, textarea {
 
 				.row > .col-6-medium {
 					width: 50%;
+					position: relative;
 				}
 
 				.row > .off-6-medium {
@@ -1185,6 +1187,7 @@ input, select, textarea {
 
 				.row > .col-12-small {
 					width: 100%;
+					position: relative;
 				}
 
 				.row > .off-12-small {
@@ -1442,8 +1445,11 @@ input, select, textarea {
 		clear: both;
 	}
 
-	p, ul, ol, dl, table, blockquote, form {
+	ul, ol, dl, table, blockquote, form {
 		margin-bottom: 2em;
+	}
+	p{
+		margin-bottom: 1em;
 	}
 
 /* Table */
@@ -1968,8 +1974,12 @@ button,
 
 	#worknav {
 		text-align: center;
-		height: 4.25em;
+		height: 4.5em;
 		cursor: default;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 1.25em 1.25em 0em 0em;
 	}
 
 		#worknav a {
