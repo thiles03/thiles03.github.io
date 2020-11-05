@@ -43,4 +43,5 @@ document.querySelector(".close").addEventListener("click", () => {
 // When the user clicks on <span> (x), close the video modal
 document.querySelector(".closeVid").addEventListener("click", () => {
     modalVid.style.display = "none";
+    modalVidContent.src = null;
 });
