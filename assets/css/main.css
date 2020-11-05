@@ -1605,7 +1605,7 @@ input, select, textarea {
 
 /* Modal */
 
-.modal {
+.modal, .modalVid {
 	display: none;
 	position: fixed;
 	z-index: 1;
@@ -1619,7 +1619,7 @@ input, select, textarea {
 	background-color: rgba(0,0,0,0.9);
   }
 
-.modalImage {
+.modalImage, .modalVidContent {
 	margin: auto;
 	display: block;
 	width: 80%;
@@ -1627,7 +1627,7 @@ input, select, textarea {
 	border-radius: 10px;
   }
 
-.close {
+.close, .closeVid {
 	position: absolute;
 	top: 15px;
 	right: 35px;
@@ -1637,6 +1637,13 @@ input, select, textarea {
 	transition: 0.3s;
   }
 
+  .closeVid:hover,
+  .closeVid:focus {
+  	color: #bbb;
+ 	text-decoration: none;
+  	cursor: pointer;
+}
+
   .close:hover,
   .close:focus {
   	color: #bbb;
@@ -1644,7 +1651,7 @@ input, select, textarea {
   	cursor: pointer;
 }
 
-.caption {
+.caption, .captionVid {
 	margin: auto;
 	display: block;
 	width: 80%;
@@ -1656,7 +1663,7 @@ input, select, textarea {
   }
   
   /* Zoom in the Modal */
-.modalImage, .caption {
+.modalImage, .modalVidContent .caption {
 	animation-name: zoom;
 	animation-duration: 0.6s;
   }
@@ -1667,7 +1674,7 @@ input, select, textarea {
   }
 
   @media only screen and (max-width: 768px){
-	.modalImage {
+	.modalImage, .modalVidContent {
 	  width: 100%;
 	}
   }
@@ -1835,6 +1842,10 @@ button,
 		position: relative;
 		text-decoration: none;
 	}
+
+		.icon:hover {
+			cursor: pointer;
+		}
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
