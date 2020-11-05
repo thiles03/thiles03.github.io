@@ -1363,18 +1363,19 @@ input, select, textarea {
 
 		}
 
-	strong, b, h1, h2, h3, h4, h5, h6 {
+	strong, b, h1, h3, h4, h5, h6 {
 		font-weight: 400;
-		color: #363636;
+		color: #222222;
 	}
 
 	h2 {
 		font-weight: 300;
-		color: #777777;
+		color: #444444;
 	}
 
 	p{
 		text-align: justify;
+		color: #444444;
 	}
 
 	h1 {
