@@ -20,7 +20,8 @@ Array.from(document.querySelectorAll(".projectImg")).forEach(item => {
 var modalVidContent = document.querySelector(".modalVidContent");
 var captionTextVid = document.querySelector(".captionVid");
 
-var videos = ["videos/vid1.mp4",
+var videos = ["videos/vid0.mp4",
+    "videos/vid1.mp4",
     "videos/vid2.mp4",
     "videos/vid3.mp4",
     "videos/vid4.mp4"];
