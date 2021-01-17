@@ -35,6 +35,7 @@
 				<span class="close">&times;</span>
 				<img class="modalImage" src="">
 				<div class="caption" innerHTML=""></div>
+				<div class="modalText" innerHTML=""></div>
 			</div>
 
 			<!-- Video Modal -->
@@ -62,23 +63,48 @@
 					<h1>Work</h1>
 				</header>
 				<p>
-					I'm a gameplay programmer and software developer with experience in C/C++, C#, Python, Java, JavaScript, HTML/CSS. 
+					I'm a gameplay programmer and software developer with experience in C/C++, C#, Python, Java,
+					JavaScript, HTML/CSS.
 					Here are some personal and professional projects I
-					have worked on, in a variety of different
-					languages.
+					have worked on. Click the images for more information. Enjoy!
 				</p><br>
 				<section>
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
+							<div class="hiddenModalText">
+								<strong>Description:</strong> A cyberpunk/sci-fi themed shooter. An exploration of third
+								person combat
+								mechanics in Unreal Engine.
+								<br><br>
+								<strong>Core Mechanics:</strong>
+								<li><b>World Interaction</b> - Through the use of raycasting, any object within a
+									certain range of the player's crosshair can be targetted. If the returned hit result
+									is a physics object, the player is able to interact with the attached physics handle
+									and move the object within the scene.</li>
+								<br>
+								<li><b>AI Behaviour</b> - Behaviour trees were built to enable enemy searching,
+									patrolling and attacking routines. Services, tasks, decorators and selectors were
+									scripted in C++ to give the AI contoller access to certain player variables
+									such as their location.</li>
+								<br>
+								<li><b>Ranged Combat</b> - Custom line tracing was employed to determine what players
+									can shoot through and what they have hit. If the object is an enemy character then a
+									custom function is called in order to deal damage. Firing weapons also instantiates
+									sound and visual effects.</li>
+								<br>
+								<li><b>Camera Effects</b> - The zoom effect when aiming was acheived by employing a
+									timeline to return a float value at a given point along a curve. The camera then
+									interpolates between two field of view values depending on the returned float.</li>
+								<br>
+								<li><b>State Machines</b> - By integrating Epic's Paragon assets from the marketplace,
+									animations and
+									blendspaces were able to be triggered depending on the character's state. Custom
+									events were used when syncing blended animations and managing combat behaviour.</li>
+							</div>
 							<img class="projectImg" src="images/unreal-tps.jpg"
-								alt="Third Person Mechanics in Unreal Engine"><br>
-							<h3>3rd Person Mechanics</h3>
+								alt="CyberShot - Third Person Mechanics in Unreal Engine."><br>
+							<h3>Cybershot</h3>
 							<p>Unreal Engine, C++</p>
-							<p>Sci-Fi shooter. An exploration of third person combat mechanics in Unreal.
-								World interaction, combat logic and character animations achieved through various
-								methods including raycasts, collision
-								detection and manipulation of physics handles.
-							</p><br>
 							<br>
 							<br>
 							<nav id="worknav">
@@ -92,14 +118,33 @@
 							</nav>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
+							<div class="hiddenModalText">
+								<strong>Description:</strong> An endless runner game. Dodge obstacles and rack up the
+								best high score you can. The further you go, the higher your score.
+								<br><br>
+								<strong>Core Mechanics:</strong>
+								<li><b>Procedural Generation</b> - Terrain tiles were designed with references to an
+									array of transform variables and an array of obstacle classes. The construction
+									script selects from these arrays, randomly spawning variations of obstacles as the
+									terrain is
+									instantiated.</li>
+								<br>
+								<li><b>Trigger Volumes</b> - Trigger
+									volumes were used to despawn terrain tiles off camera, as the player overlaps them.
+									As tiles are removed, new tiles are spawned at the front of the level.</li>
+								<br>
+								<li><b>Collision Detection</b> - Colliding with
+									objects disables the player controller, initiates ragdoll physics and ends the run.
+									A timer is triggered to reload the level.</li>
+								<br>
+								<li><b>High Score Feature</b> - The game mode class handles score incrementation as the
+									player progresses through the level. At certain thresholds the game logic will allow
+									more obstacles to be spawned and speed to be increased, making the game harder.</li>
+							</div>
 							<img class="projectImg" src="images/eternal-jaunt.jpg"
-								alt="An infinite runner built in UE4"><br>
-							<h3>Infinity Runner</h3>
+								alt="The Eternal Jaunt - An infinity runner built in Unreal Engine."><br>
+							<h3>The Eternal Jaunt</h3>
 							<p>Unreal Engine, C++</p>
-							<p>An endless runner game. Dodge obstacles and rack up the best high score you can. Trigger
-								volumes used to script procedural generation and despawning of terrain. Colliding with
-								objects disables the player controller and initiates ragdoll physics.
-							</p><br>
 							<br>
 							<br>
 							<nav id="worknav">
@@ -112,13 +157,38 @@
 							</nav>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
+							<div class="hiddenModalText">
+								<strong>Description:</strong> Magic Ike is a top down action game.
+								Gameplay mechanics, particle effects and user interface were all built from the ground
+								up and
+								combined with models from the assest store.
+								<br><br>
+								<strong>Core Mechanics:</strong>
+								<li><b>Magic Projectiles</b> - When the player attacks, a script decrements their mana
+									and spawn a projectile. If an enemy collider is hit, it calls to their stats
+									component to take damage. The projectile, impact and casting effects were all drawn
+									in photoshop and created using Unity's VFX graph.</li>
+								<br>
+								<li><b>Character Stats</b> - This component manages the player and enemy stats, such as
+									health and mana. When damage is received or a character is killed it co-ordinates
+									the sending of necessary messages to handle the event.</li>
+								<br>
+								<li><b>Power-Ups</b> - On enemy death a random number generator will determine if a
+									power-up is spawned, selecting randomly from an array of classes. Power-up behaviour
+									and active effects are governed by two over-arching classes, employing the use of a
+									dictionary to map collected power-ups to their remaining duration in seconds and
+									remove them when it reches zero.</li>
+								<br>
+								<li><b>Design Patterns</b> - Software was designed with class hierarchy and
+									Object-Oriented patterns in mind, such as the Factory Pattern and Singleton Pattern
+									when deciding which power-ups to instantiate and providing a single global point of
+									access to manage their active
+									effects.</li>
+							</div>
 							<img class="projectImg" src="images/magicike1.jpg"
 								alt="Magic Ike - Top down shooter built in Unity3D."><br>
-							<h3>Top Down Action</h3>
+							<h3>Magic Ike</h3>
 							<p>Unity3D, C#, Photoshop</p>
-							<p>Top down action game.
-								Gameplay mechanics, particle effects and user interface all built from the ground up and
-								combined with models from the assest store.</p><br>
 							<br>
 							<br>
 							<nav id="worknav">
@@ -130,11 +200,26 @@
 							</nav>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
-							<img class="projectImg" src="images/pathfinding.jpg" alt="A* Pathfinding Algorithm"><br>
+							<div class="hiddenModalText">
+								<strong>Description:</strong> Pathfinding program that finds the shortest possible path
+								between two points utilising the A* algorithm.
+								<br><br>
+								<strong>Core Mechanics:</strong>
+								<li><b>Path Tree</b> - A hierarchical tree of known paths is stored along with their
+									cost. These are incrementally extended until the end node is reached and the path
+									with the least cost is chosen.</li>
+								<br>
+								<li><b>Priority Queue</b> - At each iteration, the node with the lowest path cost is
+									removed from the open set and its neighbours are added, along with their updated
+									costs.</li>
+								<br>
+								<li><b>Manhattan Distance</b> - The cost of each node is calculated by adding its path
+									cost from the start node to it's estimated cheapest distance from the end node. The
+									heuristic used to estimate this distance is Manhattan distance. </li>
+							</div>
+							<img class="projectImg" src="images/pathfinding.jpg" alt="A* Pathfinding Algorithm."><br>
 							<h3>Pathfinding Algorithm</h3>
 							<p>Python, Pygame</p>
-							<p>Pathfinding program that finds the shortest possible path
-								between two points utilising the A* algorithm.</p><br>
 							<br>
 							<br>
 							<nav id="worknav">
@@ -145,12 +230,16 @@
 							</nav>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
-							<img class="projectImg" src="images/news.jpg" alt="News Headline Scraper"><br>
+							<div class="hiddenModalText">
+								<strong>Description:</strong> Web scraper used to assist in intelligence gathering.
+								Collates headlines from popular
+								news
+								websites and formats them into comma-separated values for use in spreadsheets.
+								<br><br>
+							</div>
+							<img class="projectImg" src="images/news.jpg" alt="News Headline Scraper."><br>
 							<h3>Headline Scraper</h3>
 							<p>Python</p>
-							<p>Web scraper used to assist in intelligence gathering. Collates headlines from popular
-								news
-								websites and formats them into comma-separated values.</p><br>
 							<br>
 							<br>
 							<nav id="worknav">
@@ -161,11 +250,15 @@
 							</nav>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
+							<div class="hiddenModalText">
+								<strong>Description:</strong> Procedurally generated terrain for use in open world
+								projects.
+								<br><br>
+							</div>
 							<img class="projectImg" src="images/landscape.jpg"
-								alt="Building landscapes in World Machine"><br>
+								alt="Building landscapes in World Machine."><br>
 							<h3>Landscapes</h3>
 							<p>World Machine</p>
-							<p>Procedurally generated terrain for use in open world projects.</p><br>
 							<br>
 							<br>
 							<nav id="worknav">
@@ -214,7 +307,7 @@
 			<ul class="copyright">
 				<li><a id="fa" class="icon solid fa-building"></a>&nbsp;&nbsp;&nbsp;Leeds, UK</li>
 				<li>Email: <a href="mailto:thiles03@gmail.com">thiles03@gmail.com</a></li>
-				<li>&copy; 2020</li>
+				<li>&copy; 2021</li>
 			</ul>
 		</div>
 
