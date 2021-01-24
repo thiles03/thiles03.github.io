@@ -21,3 +21,7 @@ document.querySelector(".close").addEventListener("click", () => {
     modal.style.display = "none";
 });
 
+window.addEventListener("popstate", () => {
+    modal.style.display = "none";
+});
+
