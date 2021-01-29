@@ -68,6 +68,48 @@
 						<div class="col-4 col-6-medium col-12-small">
 							<div class="hiddenModalText">
 								<nav id="worknavmod">
+									<a href="" class="icon solid fa-gamepad">
+										<span>Play</span></a>
+									<a href="https://youtu.be/tvEegByxn0g"
+										class="icon solid fa-play-circle"><span>Watch</span></a>
+									<a href="https://github.com/thiles03/bullet-rain.git"
+										class="icon solid fa-code"><span>Source
+											Code</span></a>
+								</nav>
+								<strong>Description:</strong> First person action where the aim is to survive as long as
+								possible against the hordes of minions. Compete for the highest kill count.
+								<br><br>
+								<strong>Core Mechanics:</strong>
+								<li><b>Bullet Time</b> - By stepping the time dilation up and down the player is able to
+									enter a slow motion state. This is bound to a timer that depletes when slow motion
+									is active and gradually regenerates when not in use.</li>
+								<br>
+								<li><b>Explosions!</b> - When a grenade is thrown, a timer begins that calls it's
+									delegate function to handle the explosion. At detonation, all enemies withing a
+									defined spherical radius are added to an array. This array is iterated over to deal
+									damage to and add a physics force in the direction of the enemy. Custom physics rigs
+									were created to simulate ragdoll effects.</li>
+								<br>
+								<li><b>Dual-wielding</b> - Operate both pistols independently. Enumerators were declared
+									to assign each weapon to a constant. A set of common functions were defined for
+									firing and reloading that accepted these enumerators as parameters, allowing for
+									seperate functionality.</li>
+								<br>
+								<li><b>External Ballistics</b> - Projectiles are instantiated in the game world and act
+									as physics objects, travelling in a parabolic curve towards their intended target.
+									Collision events were programmed to handle damage, visuals and contextual sound spawning. Custom
+									visual effects were added to produce bullet trails, imitating real life "swirl".
+								</li>
+								<br>
+							</div>
+							<img class="projectImg" src="images/bulletrain.jpg"
+								alt="Bullet Rain - First person shooter with slow motion mechanics"><br>
+							<h3>Bullet Rain</h3>
+							<p>C++, C#, Unreal Engine, Blueprints</p>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<div class="hiddenModalText">
+								<nav id="worknavmod">
 									<a href="https://youtu.be/i4X6uuqct2Y" class="icon solid fa-play-circle">
 										<span>Watch</span></a>
 									<a href="https://youtu.be/kO6e1p6IUkI"
@@ -104,49 +146,12 @@
 									animations and
 									blendspaces were able to be triggered depending on the character's state. Custom
 									events were used when syncing blended animations and managing combat behaviour.</li>
+								<br>
 							</div>
 							<img class="projectImg" src="images/unreal-tps.jpg"
-								alt="CyberShot - Third Person Mechanics in Unreal Engine."><br>
+								alt="CyberShot - Open-world third person combat in Unreal Engine."><br>
 							<h3>Cybershot</h3>
-							<p>Unreal Engine, C++, C#</p>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<div class="hiddenModalText">
-								<nav id="worknavmod">
-									<a href="https://tomhiles.itch.io/eternal-jaunt"
-										class="icon solid fa-gamepad"><span>Play</span></a>
-									<a href="https://youtu.be/gN131LybfD0"
-										class="icon solid fa-play-circle"><span>Watch</span></a>
-									<a href="https://github.com/thiles03/eternal-jaunt.git"
-										class="icon solid fa-code"><span>Source
-											Code</span></a>
-								</nav>
-								<strong>Description:</strong> An endless runner game. Dodge obstacles and rack up the
-								best high score you can. The further you go, the higher your score.
-								<br><br>
-								<strong>Core Mechanics:</strong>
-								<li><b>Procedural Generation</b> - Terrain tiles were designed with references to an
-									array of transform variables and an array of obstacle classes. The construction
-									script selects from these arrays, randomly spawning variations of obstacles as the
-									terrain is
-									instantiated.</li>
-								<br>
-								<li><b>Trigger Volumes</b> - Trigger
-									volumes were used to despawn terrain tiles off camera, as the player overlaps them.
-									As tiles are removed, new tiles are spawned at the front of the level.</li>
-								<br>
-								<li><b>Collision Detection</b> - Colliding with
-									objects disables the player controller, initiates ragdoll physics and ends the run.
-									A timer is triggered to reload the level.</li>
-								<br>
-								<li><b>High Score Feature</b> - The game mode class handles score incrementation as the
-									player progresses through the level. At certain thresholds the game logic will allow
-									more obstacles to be spawned and speed to be increased, making the game harder.</li>
-							</div>
-							<img class="projectImg" src="images/eternal-jaunt.jpg"
-								alt="The Eternal Jaunt - An infinity runner built in Unreal Engine."><br>
-							<h3>The Eternal Jaunt</h3>
-							<p>Unreal Engine, C++, Blueprints</p>
+							<p>C++, C#, Unreal Engine</p>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<div class="hiddenModalText">
@@ -184,11 +189,51 @@
 									when deciding which power-ups to instantiate and providing a single global point of
 									access to manage their active
 									effects.</li>
+								<br>
 							</div>
 							<img class="projectImg" src="images/magicike1.jpg"
 								alt="Magic Ike - Top down shooter built in Unity3D."><br>
 							<h3>Magic Ike</h3>
-							<p>Unity3D, C#, Photoshop</p>
+							<p>C#, Unity3D, Photoshop</p>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<div class="hiddenModalText">
+								<nav id="worknavmod">
+									<a href="https://tomhiles.itch.io/eternal-jaunt"
+										class="icon solid fa-gamepad"><span>Play</span></a>
+									<a href="https://youtu.be/gN131LybfD0"
+										class="icon solid fa-play-circle"><span>Watch</span></a>
+									<a href="https://github.com/thiles03/eternal-jaunt.git"
+										class="icon solid fa-code"><span>Source
+											Code</span></a>
+								</nav>
+								<strong>Description:</strong> An endless runner game. Dodge obstacles and rack up the
+								best high score you can. The further you go, the higher your score.
+								<br><br>
+								<strong>Core Mechanics:</strong>
+								<li><b>Procedural Generation</b> - Terrain tiles were designed with references to an
+									array of transform variables and an array of obstacle classes. The construction
+									script selects from these arrays, randomly spawning variations of obstacles as the
+									terrain is
+									instantiated.</li>
+								<br>
+								<li><b>Trigger Volumes</b> - Trigger
+									volumes were used to despawn terrain tiles off camera, as the player overlaps them.
+									As tiles are removed, new tiles are spawned at the front of the level.</li>
+								<br>
+								<li><b>Collision Detection</b> - Colliding with
+									objects disables the player controller, initiates ragdoll physics and ends the run.
+									A timer is triggered to reload the level.</li>
+								<br>
+								<li><b>High Score Feature</b> - The game mode class handles score incrementation as the
+									player progresses through the level. At certain thresholds the game logic will allow
+									more obstacles to be spawned and speed to be increased, making the game harder.</li>
+								<br>
+							</div>
+							<img class="projectImg" src="images/eternal-jaunt.jpg"
+								alt="The Eternal Jaunt - An infinity runner built in Unreal Engine."><br>
+							<h3>The Eternal Jaunt</h3>
+							<p>C++, Unreal Engine, Blueprints</p>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<div class="hiddenModalText">
@@ -213,6 +258,7 @@
 								<li><b>Manhattan Distance</b> - The cost of each node is calculated by adding its path
 									cost from the start node to it's estimated cheapest distance from the end node. The
 									heuristic used to estimate this distance is Manhattan distance. </li>
+								<br>
 							</div>
 							<img class="projectImg" src="images/pathfinding.jpg" alt="A* Pathfinding Algorithm."><br>
 							<h3>Pathfinding Algorithm</h3>
